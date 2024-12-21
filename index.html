@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Equalizer landing page</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components/button.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <picture class="bg-picture">
+          <!-- Image for desktop -->
+          <source
+            srcset="images/image-desktop.jpg"
+            media="(min-width: 1024px)"
+          />
+
+          <!-- Image for tablet -->
+          <source srcset="images/image-tablet.jpg" media="(min-width: 768px)" />
+
+          <!-- Fallback or phone image -->
+          <img src="assets/bg-main-mobile.png" alt="bg image" />
+        </picture>
+        <div class="blurr-effect-1"></div>
+        <div class="blurr-effect-2"></div>
+        <div class="image-container">
+          <img
+            src="assets/bg-pattern-1.svg"
+            alt="bg-pattern1"
+            class="bg-pattern-1"
+          />
+        </div>
+
+        <img src="assets/logo.svg" alt="logo" id="logo-id" />
+        <div class="hero-bottom">
+          <h2>We make your music sound extraordinary</h2>
+          <p>
+            A system audio equalizer specifically designed for Android and iOS.
+            Freely tune the way your music sounds with a professional grade
+            parametric EQ & volume mixer. Control bass, mids, treble, gain
+            control, reverb, and more!
+          </p>
+        </div>
+      </section>
+      <section class="content">
+        <div class="black-bg">
+          <img
+            src="assets/bg-pattern-2.svg"
+            alt="bg pattern2"
+            class="bg-pattern-2"
+          />
+        </div>
+        <img
+          src="assets/illustration-app.png"
+          alt="application image"
+          class="application-img"
+        />
+        <div class="premium">
+          <div class="premium-top">
+            <div class="premium-top-pitch">
+              <h2>Premium EQ</h2>
+              <p>
+                Get expert-level control with a robust equalizer, volume mixer,
+                and spatial audio. Take your listening experience to a whole new
+                level and access all our incredible features!
+              </p>
+            </div>
+            <div class="premium-top-price">
+              <h1>$4</h1>
+              <span>/ month</span>
+            </div>
+          </div>
+          <div class="premium-bottom">
+            <button class="download-button apple">
+              <div class="download-button-content">
+                <div class="download-button-icon-container">                
+                  <img src="assets/icon-apple-white.svg" 
+                  alt="Apple Icon"
+                  class="download-button-icon"
+                  data-hover-src="assets/icon-apple-black.svg"
+                  data-default-src="assets/icon-apple-white.svg"
+                  />
+                </div>
+                <span class="download-button-text">iOS Download</span>
+              </div>
+            </button>
+            <button class="download-button android">
+              <div class="download-button-content">
+                <div class="download-button-icon-container">                
+                  <img src="assets/icon-android.svg" class="download-button-icon"/>
+                </div>
+                <span class="download-button-text">Android Download</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <img src="assets/logo.svg" alt="logo" id="logo-id" />
+        <div class="footer-content">
+          <p>All rights reserved © Equalizer 2021 <br \> Have any problems? Contact us via social media or email us at</p>
+          <h3>equalizer@example.com</h3>
+        </div>
+        <div class="footer-social">
+          <div class="footer-social-icon-container">                
+            <img src="assets/icon-facebook.svg" 
+            class="footer-social-icon-facebook"
+            data-hover-src="assets/icon-facebook-hover.svg"
+            data-default-src="assets/icon-facebook.svg"
+            />
+          </div>
+          <div class="footer-social-icon-container">                
+            <img src="assets/icon-instagram.svg" 
+            class="footer-social-icon-instagram"
+            data-hover-src="assets/icon-instagram-hover.svg"
+            data-default-src="assets/icon-instagram.svg"/>
+          </div>
+          <div class="footer-social-icon-container">                
+            <img src="assets/icon-twitter.svg" 
+            class="footer-social-icon-twitter"
+            data-hover-src="assets/icon-twitter-hover.svg"
+            data-default-src="assets/icon-twitter.svg"
+            />
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
+<script>
+  // Get the Apple button
+const appleButton = document.querySelector('.download-button.apple');
+
+// Get the Apple icon
+const appleIcon = appleButton.querySelector('.download-button-icon');
+
+// Add event listeners for hover
+appleButton.addEventListener('mouseover', () => {
+  appleIcon.src = appleIcon.getAttribute('data-hover-src');
+});
+
+appleButton.addEventListener('mouseout', () => {
+  appleIcon.src = appleIcon.getAttribute('data-default-src');
+});
+
+const facebookIcon = document.querySelector('.footer-social-icon-facebook');
+facebookIcon.addEventListener('mouseover', () => {
+  facebookIcon.src = facebookIcon.getAttribute('data-hover-src');
+});
+facebookIcon.addEventListener('mouseout', () => {
+  facebookIcon.src = facebookIcon.getAttribute('data-default-src');
+});
+
+
+const instagramIcon = document.querySelector('.footer-social-icon-instagram');
+instagramIcon.addEventListener('mouseover', () => {
+  instagramIcon.src = instagramIcon.getAttribute('data-hover-src');
+});
+instagramIcon.addEventListener('mouseout', () => {
+  instagramIcon.src = instagramIcon.getAttribute('data-default-src');
+});
+
+const twitterIcon = document.querySelector('.footer-social-icon-twitter');
+twitterIcon.addEventListener('mouseover', () => {
+  twitterIcon.src = twitterIcon.getAttribute('data-hover-src');
+});
+twitterIcon.addEventListener('mouseout', () => {
+  twitterIcon.src = twitterIcon.getAttribute('data-default-src');
+});
+</script>

@@ -1,0 +1,77 @@
+/* styles/components/button.css */
+.custom-button {
+    display: flex;
+    padding: var(--spacing-200, 16px) var(--spacing-400, 32px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-100, 8px);
+    align-self: stretch;
+    border-radius: 12px;
+    background: var(--color-slate, #191826);
+    color: #ffffff; /* Button text color */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .apple .button-text {
+    color: var(--color-white, #FCFAF9);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    
+    /* desktop/text-preset-6 */
+    font-family: "IBM Plex Sans";
+    font-size: var(--font-size-desktop-text-preset-6, 18px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%; /* 32.4px */
+  }
+  .android .button-text {
+    color: var(--color-slate, #191826);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    
+    /* desktop/text-preset-6 */
+    font-family: "IBM Plex Sans";
+    font-size: var(--font-size-desktop-text-preset-6, 18px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%; /* 32.4px */
+  }
+  .android {
+    background: var(--color-white, #FCFAF9);
+  }
+  .apple:hover {
+    background: var(--color-cyan, #66E2DC);
+    color: var(--color-slate, #191826);
+  }
+
+  .android:hover {
+    background: var(--color-yellow, #FFB964);
+  }
+
+  .apple-icon {
+    width: 17.083px;
+    height: 20px;
+    display: block;
+  }
+
+  .button-contnet {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .android:hover {
+    background: var(--color-yellow, #FFB964);
+  }
+  .apple:hover .button-text {
+    color: var(--color-slate, #191826); /* Ensure .button-text color changes on hover */
+  }
+  .apple:hover .apple-icon {
+    content: attr(data-hover-src);
+  }
+ 
