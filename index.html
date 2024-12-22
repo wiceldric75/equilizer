@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styles/components/button.css" />
   </head>
   <body>
+    <div class="marker"></div>
     <main>
       <section class="hero">
         <picture class="bg-picture">
@@ -37,6 +38,7 @@
         </picture>
         <div class="blurr-effect-1"></div>
         <div class="blurr-effect-2"></div>
+        <div class="blurr-effect-3"></div>
         <div class="image-container">
           <img
             src="assets/bg-pattern-1.svg"
@@ -57,6 +59,7 @@
         </div>
       </section>
       <section class="content">
+        <div class="blurr-effect-4"></div>
         <div class="black-bg">
           <img
             src="assets/bg-pattern-2.svg"
@@ -111,32 +114,37 @@
       </section>
       <footer>
         <img src="assets/logo.svg" alt="logo" id="logo-id" />
-        <div class="footer-content">
-          <p>All rights reserved © Equalizer 2021 <br \> Have any problems? Contact us via social media or email us at</p>
-          <h3>equalizer@example.com</h3>
+        <div class="footer-content-and-social-wrapper">
+          <div class="footer-content-wrapper">
+            <div class="footer-content">
+              <p>All rights reserved © Equalizer 2021 <br \> Have any problems? Contact us via social media or email us at</p>
+              <h3>equalizer@example.com</h3>
+            </div>
+          </div>
+          <div class="footer-social">
+            <div class="footer-social-icon-container">                
+              <img src="assets/icon-facebook.svg" 
+              class="footer-social-icon-facebook"
+              data-hover-src="assets/icon-facebook-hover.svg"
+              data-default-src="assets/icon-facebook.svg"
+              />
+            </div>
+            <div class="footer-social-icon-container">                
+              <img src="assets/icon-instagram.svg" 
+              class="footer-social-icon-instagram"
+              data-hover-src="assets/icon-instagram-hover.svg"
+              data-default-src="assets/icon-instagram.svg"/>
+            </div>
+            <div class="footer-social-icon-container">                
+              <img src="assets/icon-twitter.svg" 
+              class="footer-social-icon-twitter"
+              data-hover-src="assets/icon-twitter-hover.svg"
+              data-default-src="assets/icon-twitter.svg"
+              />
+            </div>
+          </div>
         </div>
-        <div class="footer-social">
-          <div class="footer-social-icon-container">                
-            <img src="assets/icon-facebook.svg" 
-            class="footer-social-icon-facebook"
-            data-hover-src="assets/icon-facebook-hover.svg"
-            data-default-src="assets/icon-facebook.svg"
-            />
-          </div>
-          <div class="footer-social-icon-container">                
-            <img src="assets/icon-instagram.svg" 
-            class="footer-social-icon-instagram"
-            data-hover-src="assets/icon-instagram-hover.svg"
-            data-default-src="assets/icon-instagram.svg"/>
-          </div>
-          <div class="footer-social-icon-container">                
-            <img src="assets/icon-twitter.svg" 
-            class="footer-social-icon-twitter"
-            data-hover-src="assets/icon-twitter-hover.svg"
-            data-default-src="assets/icon-twitter.svg"
-            />
-          </div>
-        </div>
+
       </footer>
     </main>
   </body>
